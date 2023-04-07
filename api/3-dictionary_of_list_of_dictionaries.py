@@ -53,7 +53,11 @@ if __name__ == '__main__':
         for value in ToDoData:
             Title = value.get("title", "no name")
             IsCompleted = value.get("completed", False)
-            data = {"task": Title, "completed": IsCompleted, "username": Username}
+            data = {
+                "task": Title,
+                "completed": IsCompleted,
+                "username": Username
+            }
             data_dict[UserId].append(data)
 
     with open("todo_all_employees.json", "w") as file:
