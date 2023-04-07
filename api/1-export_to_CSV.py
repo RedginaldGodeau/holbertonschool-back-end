@@ -45,7 +45,7 @@ if __name__ == '__main__':
     UserData = json.loads(GetAPI(UserUrl.format(UserId)))
     ToDoData = json.loads(GetAPI(ToDoUrl.format(UserId)))
 
-    Username = UserData.get("name", "Guest")
+    Username = UserData.get("username", "Guest")
 
     csvstr = ""
     # This function will generate CSV file for ToDoData
