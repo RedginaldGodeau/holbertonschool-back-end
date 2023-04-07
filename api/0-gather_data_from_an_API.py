@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 import json
 import sys
-
+"""
+    Python script that, using this REST API, 
+    for a given employee ID, 
+    returns information about his/her TODO list progress.
+"""
 args = sys.argv
 
-
+"""
+   Function for get data of API URL 
+"""
 def GetAPI(url=None):
     from urllib.request import urlopen
 
@@ -15,7 +21,9 @@ def GetAPI(url=None):
         body = response.read()
     return body
 
-
+"""
+    python main file
+"""
 if __name__ == '__main__':
     # ARGV (For UserID)
     UserId = sys.argv[1]
