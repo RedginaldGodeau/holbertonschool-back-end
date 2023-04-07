@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-    Python script that, using this REST API, 
-    for a given employee ID, 
+    Python script that, using this REST API,
+    for a given employee ID,
     returns information about his/her TODO list progress.
 """
 import json
@@ -15,7 +15,8 @@ def GetAPI(url=None):
      Get data from API URL. This function is used to get data from the API URL.
      If you want to get data from a different URL you can use this function.
 
-     @param url - URL of the API. Default is None in which case None is returned
+     @param url - URL of the API.
+     Default is None in which case None is returned
 
      @return JSON string of the
     """
