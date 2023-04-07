@@ -12,14 +12,12 @@ args = sys.argv
 
 def GetAPI(url=None):
     """
-     Get data from API URL. This function is used to get data from the API URL. If you want to get data from a different URL you can use this function.
+     Get data from API URL. This function is used to get data from the API URL.
+     If you want to get data from a different URL you can use this function.
 
      @param url - URL of the API. Default is None in which case None is returned
 
      @return JSON string of the
-    """
-    """
-        Function for get data of API URL 
     """
     from urllib.request import urlopen
 
@@ -34,8 +32,6 @@ def GetAPI(url=None):
 
 # Summary of Employee is done.
 if __name__ == '__main__':
-    """_summary_
-    """
     # ARGV (For UserID)
     UserId = sys.argv[1]
 
