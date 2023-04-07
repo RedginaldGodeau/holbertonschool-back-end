@@ -10,7 +10,7 @@ args = sys.argv
 
 def GetAPI(url=None):
     """
-     Get data from API URL. 
+     Get data from API URL.
      This function is used to get data from the API URL.
      If you want to get data from a different URL you can use this function.
 
@@ -21,7 +21,6 @@ def GetAPI(url=None):
     """
     from urllib.request import urlopen
 
-    # Returns the URL or None if the url is None.
     # Returns the URL or None if the url is None.
     if url is None:
         return None
@@ -53,7 +52,11 @@ if __name__ == '__main__':
     for value in ToDoData:
         Title = value.get("title", "no name")
         IsCompleted = value.get("completed", False)
-        csvstr += '"{}","{}","{}","{}"\n'.format(
+        if value == ToDoData[-1]:
+            csvstr += '"{}","{}","{}","{}"'.format(
+            UserId, Username, IsCompleted, Title)
+        else:
+            csvstr += '"{}","{}","{}","{}"\n'.format(
             UserId, Username, IsCompleted, Title)
 
     with open("{}.csv".format(UserId), "w") as file:
