@@ -54,10 +54,10 @@ if __name__ == '__main__':
         IsCompleted = value.get("completed", False)
         if value == ToDoData[-1]:
             csvstr += '"{}","{}","{}","{}"'.format(
-            UserId, Username, IsCompleted, Title)
+                UserId, Username, IsCompleted, Title)
         else:
             csvstr += '"{}","{}","{}","{}"\n'.format(
-            UserId, Username, IsCompleted, Title)
+                UserId, Username, IsCompleted, Title)
 
     with open("{}.csv".format(UserId), "w") as file:
         file.write(csvstr)
