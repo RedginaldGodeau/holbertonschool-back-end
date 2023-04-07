@@ -8,10 +8,10 @@ import sys
 """
 args = sys.argv
 
-"""
-   Function for get data of API URL 
-"""
 def GetAPI(url=None):
+    """
+        Function for get data of API URL 
+    """
     from urllib.request import urlopen
 
     if url is None:
@@ -21,10 +21,10 @@ def GetAPI(url=None):
         body = response.read()
     return body
 
-"""
-    python main file
-"""
 if __name__ == '__main__':
+    """
+        python main file
+    """
     # ARGV (For UserID)
     UserId = sys.argv[1]
 
